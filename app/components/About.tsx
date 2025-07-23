@@ -104,7 +104,7 @@ export default function About() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                {aboutItems.map((item, index) => (
+                {aboutItems.map((skill, index) => (
                   <motion.div
                     key={index}
                     className="flex flex-col justify-center gap-2 items-center text-center p-4 bg-black/30 rounded-xl shadow-lg border border-teal-500/10 hover:border-teal-500/30 transition-all duration-300"
@@ -118,9 +118,9 @@ export default function About() {
                       className="w-12 h-12 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-2"
                       whileHover={{ rotate: 10 }}
                     >
-                      {item.icon}
+                      {skill.icon}
                     </motion.div>
-                    <span className="text-sm font-medium text-gray-300">{item.label}</span>
+                    <span className="text-sm font-medium text-gray-300">{skill.label}</span>
                   </motion.div>
                 ))}
               </motion.div>

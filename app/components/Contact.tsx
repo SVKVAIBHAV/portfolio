@@ -24,7 +24,7 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     startTransition(async () => {
       const toastId = toast.loading("Sending message...")
@@ -41,7 +41,7 @@ export default function Contact() {
         } else {
           toast.error(result.error || "Something went wrong.", { id: toastId })
         }
-      } catch (error) {
+      } catch {
         toast.error("Failed to send message.", { id: toastId })
       }
     })

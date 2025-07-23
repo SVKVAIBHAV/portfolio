@@ -1,10 +1,10 @@
 // /app/api/contact/route.ts
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { Resend } from "resend"
 import ContactEmail from "@/app/emails/ContactEmail"
 import { prisma } from "@/lib/prisma"
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
     const { firstName, lastName, email, subject, message } = body
@@ -40,8 +40,8 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ success: true })
-  } catch (err: any) {
-    console.error("Server Error:", err)
+  } catch {
+    console.error("Server Error")
     return NextResponse.json({ error: "Something went wrong." }, { status: 500 })
   }
 }
