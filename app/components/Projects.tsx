@@ -46,8 +46,8 @@ const projects = [
     },
   },
   {
-    title: "Portfolio with 3D Animations",
-    description: "Interactive portfolio with animated 3D elements and dynamic project loading.",
+    title: "Personal Portfolio",
+    description: "Interactive portfolio with Backend.",
     image: "/assets/portfolio.png",
     technologies: ["Next.js", "Resend Email", "Tailwind CSS"],
     features: ["Hero Section", "Easy Contact", "Performance Optimized", "Better UI"],
