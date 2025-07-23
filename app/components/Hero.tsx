@@ -70,7 +70,7 @@ export default function Hero() {
               height={160}
               width={160}
               priority
-              src="/assets/mypic.jpg"
+              src="/assets/personalpic.jpg"
               alt="MyPic"
               className="w-full h-full rounded-full bg-gray-900 object-cover"
             />
