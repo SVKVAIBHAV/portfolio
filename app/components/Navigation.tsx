@@ -40,15 +40,17 @@ export default function Navigation() {
   }, [])
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const offsetTop = element.offsetTop - 80
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      })
-    }
     setIsOpen(false)
+    setTimeout(() => {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const offsetTop = element.offsetTop - 80
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        })
+      }
+    }, 300);
   }
 
   return (
@@ -120,7 +122,7 @@ export default function Navigation() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
+              className="md:hidden pb-5 overflow-hidden"
             >
               <motion.div
                 className="py-4 space-y-2 bg-black/50 backdrop-blur-xl rounded-lg mt-2 border border-teal-500/10"

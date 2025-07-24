@@ -42,19 +42,19 @@ export default function Hero() {
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute top-20 left-10 w-32 h-32 bg-teal-500/10 rounded-full blur-3xl"
+        className="absolute top-20 left-10 w-32 h-32 bg-teal-500/10 rounded-full"
       />
 
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute bottom-20 right-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl"
+        className="absolute bottom-20 right-10 w-48 h-48 bg-emerald-500/10 rounded-full"
       />
 
       <motion.div
         animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.5, 1] }}
         transition={{ duration: 7, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-500/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-500/10 rounded-full"
       />
 
       {/* Main content */}

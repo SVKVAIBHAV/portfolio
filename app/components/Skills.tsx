@@ -98,7 +98,7 @@ function SkillCard({ skillCategory, index }: { skillCategory: any; index: number
     >
       <div className="flex items-center mb-6">
         <motion.div
-          className={`w-16 h-16 rounded-xl bg-gradient-to-r ${skillCategory.color} p-3 mr-4`}
+          className={`w-16 h-16 flex justify-center items-center rounded-xl bg-gradient-to-r ${skillCategory.color} p-3 mr-4`}
           whileHover={{ rotate: 10, scale: 1.1 }}
         >
           <div className="text-white">{skillCategory.icon}</div>
